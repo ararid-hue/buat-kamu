@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pesan Cinta 💖</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    width: 90%;
+    max-width: 360px;
+    padding: 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    animation: fadeIn 1s ease;
+}
+
+h1 {
+    color: #ff4d6d;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e63950;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+    animation: fadeIn 0.5s ease;
+}
+
+.footer {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #ff4d6d;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Haiii Sayangkuu 💕</h1>
+    <p>Masukin angka <b>1–30</b>, nanti aku kasih pesan buat kamu 🤍</p>
+
+    <input type="number" id="angka" placeholder="Angkanya di sini yaa">
+    <button onclick="tampilkanPesan()">Click Me 💌</button>
+
+    <div class="result" id="pesan"></div>
+    <div class="footer" id="penutup"></div>
+</div>
+
+<script>
+function tampilkanPesan() {
+    const angka = parseInt(document.getElementById("angka").value);
+    let pesan = "";
+
+    const pesanCinta = {
+        1:"Jangan lupa sarapan ya, soalnya kamu butuh energi buat tetap lucu hari ini.",
+        2:"Kalau hari ini capek, ingat ada aku yang diam-diam nyemangatin.",
+        3:"Kamu itu paket lengkap: baik, lucu, dan bikin kangen.",
+        4:"Semoga hari ini kamu lebih banyak senyum daripada ngeluh.",
+        5:"Aku yakin hari ini bakal baik, soalnya kamu menjalaninya.",
+        6:"Jangan lupa minum air, nanti aku cerewet lagi.",
+        7:"Kehadiranmu bikin hari terasa lebih enak.",
+        8:"Kalau dunia nyebelin, kamu tetap favoritku.",
+        9:"Semangat yaa, manusia manis.",
+        10:"Hari ini kamu tetap keren, bahkan saat lagi biasa aja.",
+        11:"Jangan kebanyakan mikir, nanti kepikiran aku terus.",
+        12:"Hal sederhana + kamu = bahagia.",
+        13:"Semoga hari ini ramah sama kamu.",
+        14:"Kalau lelah, istirahat. Kalau rindu, ingat aku.",
+        15:"Kamu alasan aku senyum sendiri.",
+        16:"Jaga diri ya, aku masih butuh kamu lama.",
+        17:"Pelan-pelan aja, aku nemenin.",
+        18:"Kamu itu nyaman.",
+        19:"Hari ini kamu cukup, tanpa harus buktiin apa-apa.",
+        20:"Aku suka kamu apa adanya.",
+        21:"Versi kamu itu juara.",
+        22:"Biasa aja nggak apa-apa, kamu tetap luar biasa.",
+        23:"Semoga ada hal kecil yang bikin kamu senyum.",
+        24:"Kamu bikin rasa rumah.",
+        25:"Istirahat yaa, kamu penting.",
+        26:"Kamu favorit, tanpa syarat.",
+        27:"Walau nggak bareng, aku tetep ada.",
+        28:"Boleh manja sebentar.",
+        29:"Hari jadi punya rasa karena kamu.",
+        30:"Seperti biasa, aku tetap milih kamu."
+    };
+
+    if (pesanCinta[angka]) {
+        pesan = pesanCinta[angka];
+    } else {
+        pesan = "Eits 😝 pilih angka 1 sampai 30 yaa";
+    }
+
+    document.getElementById("pesan").innerText = pesan;
+    document.getElementById("penutup").innerText =
+        "♥ Love u a lot ♥";
+}
+</script>
+
+</body>
+</html>
